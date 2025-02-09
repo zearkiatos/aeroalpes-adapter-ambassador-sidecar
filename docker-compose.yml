@@ -5,7 +5,7 @@ services:
   aeroalpes:
     container_name: aeroalpes
     hostname: aeroalpes
-    image: aeroalpes/flask 
+    image: caprilespe/aeroalpes-sidecar:1.0.0
     networks:
       - sidecar
     labels:
@@ -14,7 +14,7 @@ services:
       - "5000:5000"
 
   adaptador:
-    image: "aeroalpes/adaptador"
+    image: "caprilespe/aeroalpes-adapter-sidecar:1.0.0"
     container_name: adaptador
     hostname: adaptador
     networks:
